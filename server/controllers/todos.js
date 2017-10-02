@@ -11,7 +11,7 @@ module.exports = {
     },
     list(req, res) {
       return Todo
-        .all()
+        .findAll()
         .then(todos => res.status(200).send(todos))
         .catch(error => res.status(400).send(error));
     },
