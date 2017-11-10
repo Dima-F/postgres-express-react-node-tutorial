@@ -1,5 +1,6 @@
-const Todo = require('../models').Todo;
-const TodoItem = require('../models').TodoItem;
+const {Todo, TodoItem} = require('../models');
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 module.exports = {
   create(req, res) {
@@ -17,6 +18,11 @@ module.exports = {
             model: TodoItem,
             as: 'todoItems',
           }],
+          where:{
+            id:{
+              [Op.lt]: 5
+            }
+          }
         })
         .then(todos => res.status(200).send(todos))
         .catch(error => {

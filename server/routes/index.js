@@ -1,6 +1,5 @@
-const todosController = require('../controllers').todos;
-const todoItemsController = require('../controllers').todoItems;
-
+const {todos:todosController, todoItems:todoItemsController}  = 
+                                    require('../controllers');
 module.exports = (app) => {
   app.get('/api', (req, res) => res.status(200).send({
     message: 'Welcome to the Todos API!',
