@@ -6,7 +6,8 @@
   "scripts": {
     "nodemon": "nodemon ./bin/www",
     "debug": "node --inspect ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "migrate":"node_modules/.bin/sequelize db:migrate"
   },
   "keywords": [],
   "author": "",

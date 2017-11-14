@@ -12,6 +12,11 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      age:{
+        type:Sequelize.INTEGER,
+        allowNull:false,
+        autoIncrement:true
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

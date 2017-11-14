@@ -5,6 +5,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    age: {
+      type:DataTypes.INTEGER,
+      autoIncrement:true,
+      allowNull:false
+    }
   });
 
   Todo.associate = (models) => {
